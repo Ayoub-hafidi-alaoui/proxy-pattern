@@ -9,12 +9,10 @@ public class StudentProxy extends Student{
 
     @Override
     public void attendSession() {
-        if(super.getAttendance().getPresent()) {
-            super.attendSession();
-        }
-        else {
+        if(!super.getAttendance().getPresent()) {
             System.out.println("Student is not attending the session");
         }
+        super.attendSession();
 
     }
 }
